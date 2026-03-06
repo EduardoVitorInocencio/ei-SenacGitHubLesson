@@ -1,0 +1,50 @@
+
+### **POLÍTICA DE REVISÃO GLOBAL (Fallback)**
+
+**Por padrão, toda e qualquer alteração no repositório exige** 
+**a aprovação de pelo menos um Tech Lead.**
+
+* @tech-leads-core
+
+
+## **DOMÍNIOS ESPECÍFICOS (Especialistas)**
+
+### PERSISTÊNCIA E DATABASE
+--------------------------------------------------------------------
+Alterações em Migrations ou Procedures exigem revisão do time de DBA.
+
+/src/database/                          @time-dba-senior
+
+/prisma/schema.prisma                   @time-dba-senior
+
+### INTELIGÊNCIA ARTIFICIAL & ML
+--------------------------------------------------------------------
+Modelos, Prompts e Pesos são de responsabilidade do AI Engineer.
+
+/src/ai-models/                         @ai-engineer-pro
+
+/src/prompts/                           @ai-engineer-pro
+
+### INTERFACE E DESIGN SYSTEM
+--------------------------------------------------------------------
+Mudanças em estilos globais devem ser validadas pelo UI/UX Lead.
+
+/src/styles/global.css                  @design-system-team
+
+/src/components/shared/                 @design-system-team
+
+### DOCUMENTAÇÃO E GUIAS
+--------------------------------------------------------------------
+A documentação é aberta para revisão da comunidade interna.
+
+/docs/                                  @open-reviewers
+
+/README.md                              @open-reviewers
+
+##### INFRAESTRUTURA E CI/CD (DevOps)
+--------------------------------------------------------------------
+Mudanças no pipeline de automação são restritas ao time de SRE.
+
+/.github/workflows/                     @devops-sre-team
+
+/docker-compose.yml                     @devops-sre-team

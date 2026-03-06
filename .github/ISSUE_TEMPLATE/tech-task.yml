@@ -1,0 +1,27 @@
+## Tipo
+Task Técnica
+
+## Contexto
+Descreva a necessidade técnica da tarefa.
+
+Exemplos:
+- refatoração
+- melhoria de performance
+- organização de código
+- ajustes de arquitetura
+
+## Objetivo
+Explique o que deve ser realizado.
+
+## Escopo
+- Item técnico 1
+- Item técnico 2
+- Item técnico 3
+
+## Requisitos Técnicos
+Dependências ou tecnologias envolvidas.
+
+## Critérios de Aceitação
+- [ ] Código implementado
+- [ ] Testado
+- [ ] Seguindo padrões do projeto
