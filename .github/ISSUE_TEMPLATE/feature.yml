@@ -1,29 +1,68 @@
-## Tipo
-Feature
+name: "Feature Request"
+description: "Sugestão ou solicitação de nova funcionalidade"
+title: "[FEATURE]: "
+labels: ["enhancement"]
+assignees: []
 
-## Contexto
-Descreva o problema ou oportunidade que motivou a criação desta funcionalidade.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este template para sugerir ou solicitar uma nova funcionalidade.
 
-## Objetivo
-Explique claramente o que deve ser desenvolvido ou implementado.
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Descreva o problema ou oportunidade que motivou a criação desta funcionalidade.
+      placeholder: Explique o contexto da nova feature...
+    validations:
+      required: true
 
-## Escopo
-- Funcionalidade 1
-- Funcionalidade 2
-- Funcionalidade 3
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Explique claramente o que deve ser desenvolvido ou implementado.
+      placeholder: O que essa funcionalidade deve fazer?
+    validations:
+      required: true
 
-## Requisitos Técnicos
-Liste requisitos técnicos ou dependências necessárias.
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo
+      description: Liste as funcionalidades incluídas nesta implementação.
+      placeholder: |
+        - Funcionalidade 1
+        - Funcionalidade 2
+        - Funcionalidade 3
 
-Exemplo:
-- Integração com API
-- Uso de banco de dados
-- Alterações na interface
+  - type: textarea
+    id: requisitos_tecnicos
+    attributes:
+      label: Requisitos Técnicos
+      description: Liste requisitos técnicos ou dependências necessárias.
+      placeholder: |
+        Exemplo:
+        - Integração com API
+        - Uso de banco de dados
+        - Alterações na interface
 
-## Referências
-Links, projetos ou documentações relacionadas.
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referências
+      description: Links, projetos ou documentações relacionadas.
+      placeholder: |
+        https://link-exemplo.com
+        https://documentacao-exemplo.com
 
-## Critérios de Aceitação
-- [ ] Critério 1
-- [ ] Critério 2
-- [ ] Critério 3
+  - type: checkboxes
+    id: criterios
+    attributes:
+      label: Critérios de Aceitação
+      options:
+        - label: Critério 1
+        - label: Critério 2
+        - label: Critério 3

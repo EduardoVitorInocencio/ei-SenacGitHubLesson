@@ -1,27 +1,59 @@
-## Tipo
-Task Técnica
+name: "Task Técnica"
+description: "Tarefa técnica relacionada a melhorias internas do projeto"
+title: "[TASK]: "
+labels: ["task"]
+assignees: []
 
-## Contexto
-Descreva a necessidade técnica da tarefa.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este template para registrar tarefas técnicas como refatoração, melhorias de performance ou ajustes de arquitetura.
 
-Exemplos:
-- refatoração
-- melhoria de performance
-- organização de código
-- ajustes de arquitetura
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Descreva a necessidade técnica da tarefa.
+      placeholder: |
+        Exemplos:
+        - refatoração
+        - melhoria de performance
+        - organização de código
+        - ajustes de arquitetura
+    validations:
+      required: true
 
-## Objetivo
-Explique o que deve ser realizado.
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Explique o que deve ser realizado.
+      placeholder: Descreva o resultado esperado da tarefa.
+    validations:
+      required: true
 
-## Escopo
-- Item técnico 1
-- Item técnico 2
-- Item técnico 3
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo
+      description: Liste os itens técnicos que fazem parte desta tarefa.
+      placeholder: |
+        - Item técnico 1
+        - Item técnico 2
+        - Item técnico 3
 
-## Requisitos Técnicos
-Dependências ou tecnologias envolvidas.
+  - type: textarea
+    id: requisitos_tecnicos
+    attributes:
+      label: Requisitos Técnicos
+      description: Dependências ou tecnologias envolvidas.
 
-## Critérios de Aceitação
-- [ ] Código implementado
-- [ ] Testado
-- [ ] Seguindo padrões do projeto
+  - type: checkboxes
+    id: criterios
+    attributes:
+      label: Critérios de Aceitação
+      options:
+        - label: Código implementado
+        - label: Testado
+        - label: Seguindo padrões do projeto

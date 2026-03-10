@@ -1,25 +1,60 @@
-## Tipo
-Documentação
+name: "Documentação"
+description: "Criação ou atualização de documentação"
+title: "[DOCS]: "
+labels: ["documentation"]
+assignees: []
 
-## Contexto
-Descreva qual documentação precisa ser criada ou atualizada.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este template para solicitar criação ou atualização de documentação.
 
-## Objetivo
-Explicar claramente o que a documentação deve cobrir.
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Descreva qual documentação precisa ser criada ou atualizada.
+      placeholder: Explique o contexto da documentação...
+    validations:
+      required: true
 
-## Escopo
-- Guia de uso
-- Explicação técnica
-- Atualização de README
-- Exemplos de uso
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Explique claramente o que a documentação deve cobrir.
+      placeholder: O que a documentação deve explicar?
+    validations:
+      required: true
 
-## Local da Documentação
-Exemplo:
-- README
-- Wiki
-- Docs internas
+  - type: checkboxes
+    id: escopo
+    attributes:
+      label: Escopo
+      description: Marque os itens que fazem parte desta documentação.
+      options:
+        - label: Guia de uso
+        - label: Explicação técnica
+        - label: Atualização de README
+        - label: Exemplos de uso
 
-## Critérios de Aceitação
-- [ ] Documentação criada
-- [ ] Revisada
-- [ ] Disponível para equipe
+  - type: textarea
+    id: local_documentacao
+    attributes:
+      label: Local da Documentação
+      description: Onde a documentação será publicada.
+      placeholder: |
+        Exemplo:
+        - README
+        - Wiki
+        - Docs internas
+
+  - type: checkboxes
+    id: criterios
+    attributes:
+      label: Critérios de Aceitação
+      options:
+        - label: Documentação criada
+        - label: Revisada
+        - label: Disponível para equipe

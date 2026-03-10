@@ -1,24 +1,64 @@
-## Tipo
-Bug
+name: "Bug Report"
+description: "Reporte um problema encontrado no sistema"
+title: "[BUG]: "
+labels: ["bug"]
+assignees: []
 
-## Descrição do Problema
-Explique o problema encontrado.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar um bug. Preencha as informações abaixo.
 
-## Passos para Reproduzir
-1. Passo 1
-2. Passo 2
-3. Passo 3
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do Problema
+      description: Explique o problema encontrado.
+      placeholder: Descreva o bug...
+    validations:
+      required: true
 
-## Comportamento Esperado
-Descreva o comportamento esperado do sistema.
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para Reproduzir
+      description: Liste os passos para reproduzir o problema.
+      placeholder: |
+        1. Passo 1
+        2. Passo 2
+        3. Passo 3
+    validations:
+      required: true
 
-## Comportamento Atual
-Explique o que realmente acontece.
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamento Esperado
+      description: Descreva o comportamento esperado do sistema.
+    validations:
+      required: true
 
-## Evidências
-Adicione prints, logs ou erros.
+  - type: textarea
+    id: atual
+    attributes:
+      label: Comportamento Atual
+      description: Explique o que realmente acontece.
+    validations:
+      required: true
 
-## Critérios de Aceitação
-- [ ] Bug corrigido
-- [ ] Testado em ambiente de desenvolvimento
-- [ ] Não gera regressões
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências
+      description: Adicione prints, logs ou erros.
+      placeholder: Cole aqui logs ou imagens.
+
+  - type: checkboxes
+    id: criterios
+    attributes:
+      label: Critérios de Aceitação
+      options:
+        - label: Bug corrigido
+        - label: Testado em ambiente de desenvolvimento
+        - label: Não gera regressões
