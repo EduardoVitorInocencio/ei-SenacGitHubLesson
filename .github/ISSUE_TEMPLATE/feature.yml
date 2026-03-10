@@ -1,6 +1,6 @@
-name: "Feature Request"
-description: "Sugestão ou solicitação de nova funcionalidade"
-title: "[FEATURE]: "
+name: "✨ Feature Request"
+description: "Suggest a new feature or improvement for the project"
+title: "[FEATURE] "
 labels: ["enhancement"]
 assignees: []
 
@@ -8,61 +8,90 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use este template para sugerir ou solicitar uma nova funcionalidade.
+        ## ✨ Feature Request
+
+        Thank you for suggesting a new feature!
+
+        Feature requests help improve the project and make it more useful for everyone.
+
+        **Before submitting**
+        - Check if a similar feature request already exists
+        - Provide clear details about the problem and the proposed solution
+        - Include examples or references when possible
 
   - type: textarea
-    id: contexto
+    id: context
     attributes:
-      label: Contexto
-      description: Descreva o problema ou oportunidade que motivou a criação desta funcionalidade.
-      placeholder: Explique o contexto da nova feature...
+      label: 📌 Context
+      description: Describe the problem or opportunity that motivated this feature request.
+      placeholder: |
+        Example:
+        Users currently cannot export reports as CSV files, which makes it difficult to analyze data outside the application.
     validations:
       required: true
 
   - type: textarea
-    id: objetivo
+    id: objective
     attributes:
-      label: Objetivo
-      description: Explique claramente o que deve ser desenvolvido ou implementado.
-      placeholder: O que essa funcionalidade deve fazer?
+      label: 🎯 Objective
+      description: Clearly explain what should be implemented.
+      placeholder: |
+        Example:
+        Add an option to export reports as CSV or Excel files directly from the dashboard.
     validations:
       required: true
 
   - type: textarea
-    id: escopo
+    id: scope
     attributes:
-      label: Escopo
-      description: Liste as funcionalidades incluídas nesta implementação.
+      label: 📦 Scope
+      description: List the main functionalities or parts included in this feature.
       placeholder: |
-        - Funcionalidade 1
-        - Funcionalidade 2
-        - Funcionalidade 3
+        Example:
+        - Add export button in the report page
+        - Generate CSV file from report data
+        - Allow Excel export format
+        - Add download notification
 
   - type: textarea
-    id: requisitos_tecnicos
+    id: technical_requirements
     attributes:
-      label: Requisitos Técnicos
-      description: Liste requisitos técnicos ou dependências necessárias.
+      label: ⚙ Technical Requirements
+      description: List technical requirements, dependencies, or implementation details.
       placeholder: |
-        Exemplo:
-        - Integração com API
-        - Uso de banco de dados
-        - Alterações na interface
+        Example:
+        - Integration with reporting API
+        - Use backend service to generate files
+        - Update frontend UI to include export options
+        - Ensure compatibility with existing report filters
 
   - type: textarea
-    id: referencias
+    id: references
     attributes:
-      label: Referências
-      description: Links, projetos ou documentações relacionadas.
+      label: 🔗 References
+      description: Add links to related issues, documentation, designs, or external examples.
       placeholder: |
-        https://link-exemplo.com
-        https://documentacao-exemplo.com
+        Example:
+        - Related issue: #42
+        - Design mockup: https://figma.com/example
+        - Similar feature: https://example.com/docs/export
+
+  - type: textarea
+    id: value
+    attributes:
+      label: 💡 Value / Impact
+      description: Explain how this feature will benefit users or the project.
+      placeholder: |
+        Example:
+        This feature will allow users to analyze data in external tools such as Excel or BI platforms.
 
   - type: checkboxes
-    id: criterios
+    id: acceptance_criteria
     attributes:
-      label: Critérios de Aceitação
+      label: ✔ Acceptance Criteria
+      description: Conditions required to consider this feature complete.
       options:
-        - label: Critério 1
-        - label: Critério 2
-        - label: Critério 3
+        - label: Feature implemented according to the described scope
+        - label: Implementation tested in development environment
+        - label: No regressions introduced
+        - label: Documentation updated if necessary

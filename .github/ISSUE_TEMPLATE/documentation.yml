@@ -1,6 +1,6 @@
-name: "Documentação"
-description: "Criação ou atualização de documentação"
-title: "[DOCS]: "
+name: "📚 Documentation"
+description: "Create, improve, or update project documentation"
+title: "[DOCS] "
 labels: ["documentation"]
 assignees: []
 
@@ -8,53 +8,92 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use este template para solicitar criação ou atualização de documentação.
+        ## 📚 Documentation Request
+
+        Use this template to request **new documentation** or **updates to existing documentation**.
+
+        Good documentation helps users and contributors understand how the project works.
+
+        **Tips**
+        - Be clear about what needs to be documented
+        - Include examples if possible
+        - Link to related features or issues
 
   - type: textarea
-    id: contexto
+    id: context
     attributes:
-      label: Contexto
-      description: Descreva qual documentação precisa ser criada ou atualizada.
-      placeholder: Explique o contexto da documentação...
-    validations:
-      required: true
-
-  - type: textarea
-    id: objetivo
-    attributes:
-      label: Objetivo
-      description: Explique claramente o que a documentação deve cobrir.
-      placeholder: O que a documentação deve explicar?
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: escopo
-    attributes:
-      label: Escopo
-      description: Marque os itens que fazem parte desta documentação.
-      options:
-        - label: Guia de uso
-        - label: Explicação técnica
-        - label: Atualização de README
-        - label: Exemplos de uso
-
-  - type: textarea
-    id: local_documentacao
-    attributes:
-      label: Local da Documentação
-      description: Onde a documentação será publicada.
+      label: 📌 Context
+      description: Describe the situation that requires documentation.
       placeholder: |
-        Exemplo:
-        - README
-        - Wiki
-        - Docs internas
+        Example:
+        A new authentication system was added but there is no documentation explaining how to configure it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Objective
+      description: Clearly explain what the documentation should cover.
+      placeholder: |
+        Example:
+        Create a guide explaining how to configure authentication using environment variables.
+    validations:
+      required: true
 
   - type: checkboxes
-    id: criterios
+    id: scope
     attributes:
-      label: Critérios de Aceitação
+      label: 📦 Scope
+      description: Select what type of documentation should be created or updated.
       options:
-        - label: Documentação criada
-        - label: Revisada
-        - label: Disponível para equipe
+        - label: User guide / usage instructions
+        - label: Technical explanation
+        - label: README update
+        - label: Code examples
+        - label: API documentation
+        - label: Installation or setup guide
+
+  - type: textarea
+    id: documentation_location
+    attributes:
+      label: 📍 Documentation Location
+      description: Where should this documentation live?
+      placeholder: |
+        Example:
+        - README.md
+        - Project Wiki
+        - /docs folder
+        - Internal documentation portal
+        - API reference section
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 🔗 References
+      description: Provide links to related issues, features, or external documentation.
+      placeholder: |
+        Example:
+        - Related issue: #123
+        - API documentation: https://example.com/api
+        - Similar implementation: https://docs.example.com/auth
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 🧩 Additional Context
+      description: Any extra details that may help create the documentation.
+      placeholder: |
+        Example:
+        The documentation should include examples using both REST and CLI.
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: ✔ Acceptance Criteria
+      description: Conditions required to consider this documentation complete.
+      options:
+        - label: Documentation created or updated
+        - label: Content reviewed for clarity and accuracy
+        - label: Documentation accessible to the team or users
+        - label: Examples or usage instructions included
