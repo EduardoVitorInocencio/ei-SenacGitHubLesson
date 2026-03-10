@@ -1,50 +1,55 @@
-
-### **POLÍTICA DE REVISÃO GLOBAL (Fallback)**
-
-**Por padrão, toda e qualquer alteração no repositório exige** 
-**a aprovação de pelo menos um Tech Lead.**
+# ==================================================
+# GLOBAL REVIEW POLICY (Fallback)
+# ==================================================
+# By default, any change in the repository requires
+# approval from at least one Tech Lead.
 
 * @tech-leads-core
 
 
-## **DOMÍNIOS ESPECÍFICOS (Especialistas)**
+# ==================================================
+# DATABASE & PERSISTENCE
+# ==================================================
+# Changes to migrations or database structures must
+# be reviewed by the DBA team.
 
-### PERSISTÊNCIA E DATABASE
---------------------------------------------------------------------
-Alterações em Migrations ou Procedures exigem revisão do time de DBA.
+src/database/              @time-dba-senior
+prisma/schema.prisma       @time-dba-senior
 
-/src/database/                          @time-dba-senior
 
-/prisma/schema.prisma                   @time-dba-senior
+# ==================================================
+# ARTIFICIAL INTELLIGENCE & ML
+# ==================================================
+# Models, prompts, and weights are owned by the AI team.
 
-### INTELIGÊNCIA ARTIFICIAL & ML
---------------------------------------------------------------------
-Modelos, Prompts e Pesos são de responsabilidade do AI Engineer.
+src/ai-models/             @ai-engineer-pro
+src/prompts/               @ai-engineer-pro
 
-/src/ai-models/                         @ai-engineer-pro
 
-/src/prompts/                           @ai-engineer-pro
+# ==================================================
+# UI / DESIGN SYSTEM
+# ==================================================
+# Changes to shared UI components or global styles
+# require review from the design system team.
 
-### INTERFACE E DESIGN SYSTEM
---------------------------------------------------------------------
-Mudanças em estilos globais devem ser validadas pelo UI/UX Lead.
+src/styles/global.css      @design-system-team
+src/components/shared/     @design-system-team
 
-/src/styles/global.css                  @design-system-team
 
-/src/components/shared/                 @design-system-team
+# ==================================================
+# DOCUMENTATION
+# ==================================================
+# Documentation can be reviewed by the internal community.
 
-### DOCUMENTAÇÃO E GUIAS
---------------------------------------------------------------------
-A documentação é aberta para revisão da comunidade interna.
+docs/                      @open-reviewers
+README.md                  @open-reviewers
 
-/docs/                                  @open-reviewers
 
-/README.md                              @open-reviewers
+# ==================================================
+# INFRASTRUCTURE / CI-CD
+# ==================================================
+# Automation pipelines and infrastructure must be
+# reviewed by the DevOps / SRE team.
 
-##### INFRAESTRUTURA E CI/CD (DevOps)
---------------------------------------------------------------------
-Mudanças no pipeline de automação são restritas ao time de SRE.
-
-/.github/workflows/                     @devops-sre-team
-
-/docker-compose.yml                     @devops-sre-team
+.github/workflows/         @devops-sre-team
+docker-compose.yml         @devops-sre-team
